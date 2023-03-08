@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .h1 {
+  	font-family: "Times New Roman", Times, serif;
+	}
+      body {
+         background-color: rgb(204,249, 255);
+      }
+   </style>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"
+    />
+    <title>web-noise-suppressor demo</title>
+     <script type="module" crossorigin src="/assets/index.928ba319.js"></script>
+   </head>
+
+  <body>
+     <h1>Final Year Project : Real Time Noise suppressor</h1>
+    <form id="form">
+      <div>
+        <h2>Choose Sample Rate</h3>
+        <label>
+          <input type="radio" name="webrtc-sampleRate" value="NaN" />
+          Default
+        </label>
+        <label>
+          <input type="radio" name="webrtc-sampleRate" value="48000" />
+          48KHz
+        </label>
+      </div>
+      <div>
+        <h2>Real Time Cancellation Options</h3>
+        <label>
+          <input type="checkbox" name="webrtc-noise" />
+          Noise suppression
+        </label>
+        <label>
+          <input type="checkbox" name="webrtc-echo" />
+          Echo cancellation
+        </label>
+      </div>
+      <div>
+        <h2>Options</h3>
+        <p><b>Type</b></p>
+        <label>
+          <input type="radio" name="type" value="disabled" checked />
+          Disabled
+        </label>
+        <label>
+          <input type="radio" name="type" value="rnnoise" />
+          Rnnoise
+        </label>
+        <p><b>Other</b></p>
+        <label>
+          <input type="checkbox" name="visualizer" checked />
+          Enable visualizer
+        </label>
+      </div>
+      <div style="display: flex; align-items: center">
+        <button id="start-button" disabled>Start</button>
+        <p style="margin-left: 0.5em; font-size: small; font-weight: bold">
+          Press Start button again to apply settings above.
+        </p>
+      </div>
+    </form>
+
+    <canvas id="canvas"></canvas>
+    
+    
+</body>
+</html>
